@@ -1,0 +1,19 @@
+.Movie-movie{
+   display: flex;
+   flex-flow: row nowrap;
+   width: 100%;
+   min-width: 200px;
+   max-width: 400px;
+   background-color: navy;
+}
+.Movie-title{
+    font-weight: bold;
+    font-size: 24px;       
+}
+.Movie-overview{
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+.Movie-image{
+   font-size: 1rem;
+}

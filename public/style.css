@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+html,body {
+   margin: 0;
+   padding: 0;
+
+}
+
+body{
+    min-height: 100vh;
+    }
+h1, h2, h3{
+    margin: 0;
+    padding: 1em;
+}
+
+.app-root{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.app-header{
+    text-align: center;
+    box-shadow: 0 0 18px -4px #00000099;
+}
+.app-header,
+.app-footer{
+    background-color: rgba(0, 0, 102, 0.75);
+}
+.app-header h2{
+    color: white;
+}
+.app-main{
+    width: 100%;
+    min-height: 80vh;
+    padding: 1em;
+}
+.search-app{
+    width: 80%;
+    max-width: 800px;
+    margin: 2em auto;
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 102, 0.5);
+    box-shadow: 0 10px 28px -8px #00000055;
+}
+.search-app form{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 0.125em;
+    box-shadow: 0 10px 28px -8px #00000055;
+    
+}
+.search-app input{
+    width: 100%;
+    border: none;
+    padding: 0.5em;
+    border-radius: 50px;
+    padding: 0.5em;
+    color: navy;
+    font-size: 1.125rem;
+}
+.search-app input:focus{
+    background: white;
+    outline: none;
+}
+.search-app button{
+    border: none;
+    background-color: rgba(0, 0, 102, 0.75);
+    padding: 0.5em 1em;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-left: 0.5em;
+    border: 2px solid rgba(0, 0, 102, 0.5);
+}
+.search-app button:hover{
+    border: 2px solid rgba(0, 0, 102, 0.5);
+    background-color: navajowhite;
+    color: rgba(0, 0, 102, 0.85);
+}
+.app-footer{
+    background-color: navy;
+    font-size: 1rem;
+    text-align: center;
+    color: navajowhite;
+    margin-top: auto;
+}
+
+.app-presentation{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    grid-gap: 3em;
+    /* border: 1px solid red; */
+    background: white;
+    width: 90%;
+    min-width: 600px;
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.Movie-component{
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items: stretch;
+   background-color: whitesmoke;
+   padding: 1.5em;
+   box-shadow: -5px 5px 30px -15px rgba(0, 0, 0, 0.75);
+   grid-gap: 1em;
+   border-radius: 30px;
+   background-color: white;
+   width: 100%;
+   min-width: 550px;
+   min-height: 300px;
+}
+
+.Movie-image-container{
+    min-width: 200px;
+    flex: 1 1 200px;
+}
+
+.Movie-info-container{
+    border-radius: 10px;
+    min-width: 300px;
+    padding: 1em;
+    flex: 1 1 700px;
+}
+
+.Movie-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.5em;
+    padding: 0 0 0.5em 0;
+    width: 100%;
+}
+
+.Movie-overview{
+    font-size: 1.125rem;
+    line-height: 1.25;
+}
+
+.Movie-image{
+   font-size: 1rem;
+   border: 1px solid white;
+   width: 100%;
+   max-width: 200px;
+   border-radius: 10px;
+   align-self: center;
+}
+.app-footer{
+    margin: 4em 0 0;
+    padding: 0.25em 0;
+    background-color: rgba(0, 0, 102, 0.75)   
+}
+.app-footer p{
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: white;
+}
