@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# The Movie App {TMDB API}
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a search engine for movie enthusiast who wants to learn more about their favorite movies.
+We generate data from the trusted API endpoints at <a href="https://www.themoviedb.org/?language=en-US">The Movie DB</a>. 
 
 ## Available Scripts
 
