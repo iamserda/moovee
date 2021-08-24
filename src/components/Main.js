@@ -5,29 +5,29 @@ import updateResults from "../AppBrain/GetResults";
 
 function Main() {
   const [query, setQuery] = useState("");
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   const [resultsMap, setResultsMap] = useState([]);
 
-  function handleChange(event) {
-    setQuery(event.target.value);
-  }
-
-  async function handleSubmit(event) {
+  const handleChange = event => { setQuery(event.target.value); }
+  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       if (!query) {
         throw new Error("query var is null");
       } else {
         const data = await getData(query);
-        await setData(data);
-        // console.log(data.results.length)
 
-        if (data.results.length !== 0) {
-          await setResultsMap(updateResults(data.results));
+        if (data.results && data.results.length !== 0) {
+          setResultsMap(updateResults(data.results));
+        }else{
+          
+          throw new Error("No results found!")
         }
       }
     } catch (err) {
       console.error(err);
+      // return an empty if no results were found! or if there was an error.
+      setResultsMap(updateResults([]));
     }
   }
 
@@ -45,7 +45,7 @@ function Main() {
           <button>Search</button>
         </form>
       </div>
-      <Presentation>{resultsMap}</Presentation>
+      <Presentation>{resultsMap.length !== 0 ? resultsMap : []}</Presentation>
       {/* Presentation is the area where the 
                 Movie components are rendered. It's a container. */}
 
