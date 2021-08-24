@@ -5,7 +5,7 @@ function Presentation(props){
     
     return(
         <div className="app-presentation">
-            {props.children}
+            {props.children ? props.children : "No results found"}
         </div>
     )
 }

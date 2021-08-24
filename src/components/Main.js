@@ -23,15 +23,16 @@ function Main(){
                 await setData(dataReceived);
                 // console.log(data.results.length)
                 
-                if(data.results.length !== 0){
+                if(data.results && data.results.length !== 0){
                     await setResultsMap(updateResults(data.results))
+                }else{
+                    throw new Error("No Data Received!")
                 }
             }
         }catch(err){
             console.error(err)
         }
     }
-
     
     return(
         <div className="app-main">
@@ -47,13 +48,10 @@ function Main(){
                 </form>
             </div>
             <Presentation>
-                { resultsMap}
+                { resultsMap ? resultsMap : "No results found!"}
             </Presentation>
             {/* Presentation is the area where the 
                 Movie components are rendered. It's a container. */}
-            
-            
-            
             {/*data && console.log(data.results[0]) */}
         </div>)
 }
