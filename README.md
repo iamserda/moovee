@@ -1,4 +1,4 @@
-# The Movie App {TMDB API}
+# Moovee: Search Engine for Movie Buffs {TMDB API}
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 This project is a search engine for movie enthusiast who wants to learn more about their favorite movies.
