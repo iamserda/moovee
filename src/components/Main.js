@@ -19,7 +19,8 @@ function Main() {
 
         if (data.results && data.results.length !== 0) {
           setIsLoading(false);
-          setResultsMap(updateResults(data.results));
+          const {results} = data;
+          setTimeout(()=>{ setResultsMap(updateResults(results)); }, 1500)
         }else{
           throw new Error("No results found!")
         }
